@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" {{#if flippyUI.direction}} dir="{{flippyUI.direction}}" {{/if}}>
+    {{> dochead}}
+    <body id="home">
+	    <header>
+		    <figure>
+			    <img width="576" alt="" src="./img/banner.png">
+			    <figcaption></figcaption>
+		    </figure>
+	    </header>
+	    <aside>
+		    <menu>
+			    <section>
+				    <details>
+					    <summary>
+						    Network
+					    </summary>
+				    </details>
+				    <nav>
+					    <ul>
+						    <li>
+							    <a href="http://www.psykoral.com" target="_blank">Psykoral</a>
+						    </li>
+						    <li>
+							    <a href="http://www.thefabled.net" target="_blank">&lt;The Fabled&gt;</a>
+						    </li>
+						    <li>
+							    <a href="http://www.jimisan.com" target="_blank">Jimisan Sushi</a>
+						    </li>
+						    <li>
+							    <a href="http://www.ruralmeanderings.com" target="_blank">Rural Meanderings</a>
+						    </li>
+						    <li>
+							    <a href="http://www.codingangry.com" target="_blank">Coding Angry</a>
+						    </li>
+						    <li>
+							    <a href="http://www.jimanderin.com/" target="_blank">Jim &amp; Erin get married</a>
+						    </li>
+					    </ul>
+				    </nav>
+			    </section>
+			    <section>
+				    <details>
+					    <summary>
+						    Services
+					    </summary>
+				    </details>
+				    <nav>
+					    <ul>
+						    <li>
+							    <a href="https://github.com/Psykoral" target="_blank">Github</a>
+						    </li>
+						    <li>
+							    <a href="https://pnote.flippydisk.com" target="_blank">Polish Notation Demo</a>
+						    </li>
+						    <li>
+							    <a href="https://github.com/Psykoral/grunt-starter-kit" target="_blank">Grunt Starer Kit</a>
+						    </li>
+						    <li>
+							    <a href="http://build.flippydisk.com/" target="_blank">Jenkins</a>
+						    </li>
+						    <li>
+							    <a href="https://github.com/Psykoral/plugapi" target="_blank">Plug.dj bot</a>
+						    </li>
+						    <li>
+							    <a href="http://plug.dj/plur-electronica/" target="_blank">Plug.dj room</a>
+						    </li>
+					    </ul>
+				    </nav>
+			    </section>
+		    </menu>
+		    <main>
+			    {{> body}}
+		    </main>
+	    </aside>
+        {{{js scripts}}}
+    </body>
+</html>
