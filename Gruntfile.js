@@ -456,6 +456,15 @@ module.exports = function (grunt) {
 		'concat:dist-min-js'
 	]);
 
+	grunt.registerTask('test', [
+		'clean',
+		'assemble:docs',
+		'less:dist',
+		'concurrent:main',
+		'concat:dist-js',
+		'concat:dist-min-js'
+	]);
+
 	grunt.registerTask('site', [
 		'assemble:docs',
 		'less:dist',
