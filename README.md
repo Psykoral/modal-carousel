@@ -17,6 +17,7 @@ Project template built from FlippyUI. modal-carousel includes:
 
 - JSDoc
 - Jasmine tests
+- DNS for Flippydisk.com
 
 ### Prerequisites
 
