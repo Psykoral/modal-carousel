@@ -4,45 +4,36 @@
     <body id="home">
 	    <header>
 		    <figure>
-			    <img width="576" alt="" src="./img/banner.png">
+			    <img width="300" alt="" src="./img/logo.png">
 			    <figcaption></figcaption>
 		    </figure>
 	    </header>
-	    <aside>
+	    <div>
 		    <menu>
 			    <section>
 				    <details>
 					    <summary>
-						    Network
+						    About
 					    </summary>
 				    </details>
 				    <nav>
 					    <ul>
+                            <li>
+                                <a href="./jsdoc/index.html" target="_blank">Documentation</a>
+                            </li>
 						    <li>
-							    <a href="http://www.psykoral.com" target="_blank">Psykoral</a>
+							    <a href="./tests.html" target="_blank">Jasmine tests</a>
 						    </li>
-						    <li>
-							    <a href="http://www.thefabled.net" target="_blank">&lt;The Fabled&gt;</a>
-						    </li>
-						    <li>
-							    <a href="http://www.jimisan.com" target="_blank">Jimisan Sushi</a>
-						    </li>
-						    <li>
-							    <a href="http://www.ruralmeanderings.com" target="_blank">Rural Meanderings</a>
-						    </li>
-						    <li>
-							    <a href="http://www.codingangry.com" target="_blank">Coding Angry</a>
-						    </li>
-						    <li>
-							    <a href="http://www.jimanderin.com/" target="_blank">Jim &amp; Erin get married</a>
-						    </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/webdevjimsutton" target="_blank">LinkedIn</a>
+                            </li>
 					    </ul>
 				    </nav>
 			    </section>
 			    <section>
 				    <details>
 					    <summary>
-						    Services
+                            FlippyUI
 					    </summary>
 				    </details>
 				    <nav>
@@ -51,19 +42,13 @@
 							    <a href="https://github.com/Psykoral" target="_blank">Github</a>
 						    </li>
 						    <li>
-							    <a href="https://pnote.flippydisk.com" target="_blank">Polish Notation Demo</a>
+							    <a href="https://github.com/Psykoral/grunt-starter-kit" target="_blank">Grunt starter kit</a>
 						    </li>
 						    <li>
-							    <a href="https://github.com/Psykoral/grunt-starter-kit" target="_blank">Grunt Starer Kit</a>
+							    <a href="https://github.com/Psykoral/modal-carousel" target="_blank">Modal carousel</a>
 						    </li>
 						    <li>
-							    <a href="http://build.flippydisk.com/" target="_blank">Jenkins</a>
-						    </li>
-						    <li>
-							    <a href="https://github.com/Psykoral/plugapi" target="_blank">Plug.dj bot</a>
-						    </li>
-						    <li>
-							    <a href="http://plug.dj/plur-electronica/" target="_blank">Plug.dj room</a>
+							    <a href="https://travis-ci.org/Psykoral/modal-carousel" target="_blank">Travis CI</a>
 						    </li>
 					    </ul>
 				    </nav>
@@ -72,7 +57,8 @@
 		    <main>
 			    {{> body}}
 		    </main>
-	    </aside>
+	    </div>
         {{{js scripts}}}
+        <input type="radio" name="carousel" id="Closed" checked disabled>
     </body>
 </html>

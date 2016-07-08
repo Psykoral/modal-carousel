@@ -14,11 +14,11 @@ module.exports = function (grunt) {
 				banner: '/*!\n<%= pkg.name %> - v<%= pkg.version %> - ' + '<%= grunt.template.today("yyyy-mm-dd, h:MM:ss TT") %>\n' .concat(grunt.file.read('LICENSE.txt')) + '*/\n\n'
 			},
 			'dist-js': {
-				src: ['<%=conf.dist%>/js/<%=pkg.name%>.js'],
+				src: ['<%=pkg.main%>'],
 				dest: '<%=conf.dist%>/js/<%=pkg.name%>.js'
 			},
 			'dist-min-js': {
-				src: ['<%=conf.dist%>/js/<%=pkg.name%>.min.js'],
+				src: ['<%=pkg.main%>'],
 				dest: '<%=conf.dist%>/js/<%=pkg.name%>.min.js'
 			}
 		},
@@ -30,17 +30,16 @@ module.exports = function (grunt) {
 					'docs/src/template/layout/*.hbs'
 				],
 				data: ['docs/data/**/*.{json,yml}'],
-				helpers: ['src/helpers/*.js'],
 				layoutdir: 'docs/src/template/layout',
 				layout: 'default.hbs'
 			},
 			docs: {
 				options: {
 					app: {
-						name: 'FlippyUI grunt-starter-kit',
+						name: 'FlippyUI modal-carousel',
 						icon: '<%=conf.temp%>/img/favicon.ico',
-						keywords: 'FlippyUI grunt starter kit',
-						description: 'FlippyUI Grunt Starter Kit'
+						keywords: 'FlippyUI modal carousel',
+						description: 'FlippyUI modal carousel'
 					},
 					images: 'img',
 					styles: ['<%=pkg.name%>.css'],
@@ -89,14 +88,7 @@ module.exports = function (grunt) {
 			main: [
 				'concurrent:test',
 				'less:dist',
-				'less:min',
-				'requirejs:combine',
-				'requirejs:compile'
-			],
-			demo: [
-				'concurrent:test',
-				'requirejs:demo',
-				'requirejs:combine'
+				'less:min'
 			]
 		},
 		connect: {
@@ -360,13 +352,6 @@ module.exports = function (grunt) {
 				mainConfigFile: '<%=conf.src%>/js/config.js',
 				wrap: true
 			},
-			demo: {
-				options: {
-					optimize: 'none',
-					include: ['demo'],
-					out: '<%=conf.dist%>/js/<%=pkg.name%>.js'
-				}
-			},
 			compile: {
 				options: {
 					out: '<%=conf.dist%>/js/<%=pkg.name%>.min.js'
@@ -391,7 +376,9 @@ module.exports = function (grunt) {
 				],
 				tasks: [
 					'jscs',
-					'concurrent:demo',
+					'concurrent:main',
+					'concat:dist-js',
+					'concat:dist-min-js',
 					'copy:temp'
 				]
 			},
@@ -448,7 +435,7 @@ module.exports = function (grunt) {
 				commitFiles: ['-a'],
 				createTag: true,
 				tagName: '%VERSION%',
-				tagMessage: 'See commits in https://github.com/Psykoral/grunt-starter-kit/milestones/%VERSION%',
+				tagMessage: 'See commits in https://github.com/Psykoral/modal-carousel/milestones/%VERSION%',
 				push: true,
 				pushTo: 'upstream',
 				gitDescribeOptions: '--tags --always --abbrev=1 --dirty=-d',
@@ -469,48 +456,13 @@ module.exports = function (grunt) {
 		'concat:dist-min-js'
 	]);
 
-	grunt.registerTask('test', [
-		'clean',
-		'assemble:docs',
-		'less:dist',
-		'concurrent:main',
-		'concat:dist-js',
-		'concat:dist-min-js'
-	]);
-
 	grunt.registerTask('site', [
 		'assemble:docs',
 		'less:dist',
-		'concurrent:demo',
-		'copy:livetests',
-		'jasmine:livetests',
-		'string-replace',
-		'copy:temp'
+		'concurrent:main'
 	]);
 
-	grunt.registerTask('live', [
-		'clean',
-		'jscs',
-		'site',
-		'concat:dist-js',
-		'connect:livereload',
-		'watch'
-	]);
-
-	grunt.registerTask('livetests', [
-		'clean',
-		'jsdoc',
-		'less:dist',
-		'copy:livetests',
-		'jasmine:livetests',
-		'string-replace',
-		'connect:livetests',
-		'watch:livetests'
-	]);
-
-	grunt.registerTask('docs', [
-		'clean',
-		'test',
+	grunt.registerTask('testdocs', [
 		'jsdoc',
 		'less:dist',
 		'copy:livetests',
@@ -518,21 +470,13 @@ module.exports = function (grunt) {
 		'string-replace'
 	]);
 
-	grunt.registerTask('site', [
-		'assemble:docs',
-		'less:dist',
-		'concurrent:demo',
-		'copy:livetests',
-		'jasmine:livetests',
-		'string-replace',
-		'copy:temp'
-	]);
-
 	grunt.registerTask('live', [
 		'clean',
 		'jscs',
 		'site',
 		'concat:dist-js',
+		'copy:temp',
+		'testdocs',
 		'connect:livereload',
 		'watch'
 	]);

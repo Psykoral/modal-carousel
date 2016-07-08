@@ -20,17 +20,17 @@ If firewalls are an issue for things like git:// and ssh:// protocols, use an ht
 
 These settings are stored in the .gitconfig file in your user's home directory if you ever need to edit them directly.
 
-First you will want to go to https://github.com/Psykoral/grunt-starter-kit and create a fork of this repo for yourself.
+First you will want to go to https://github.com/Psykoral/modal-carousel and create a fork of this repo for yourself.
 
-Next decide where you're going to put your project files (like /Users/you/grunt-starter-kit/)
+Next decide where you're going to put your project files (like /Users/you/modal-carousel/)
 
 Then you will want to do one of the following. Probably the first.
 
 From within the directory that you created run the following commands:
 
     git init
-    git remote add upstream https://github.com/Psykoral/grunt-starter-kit
-    git remote add origin https://github.com/{yourRepo}/grunt-starter-kit
+    git remote add upstream https://github.com/Psykoral/modal-carousel
+    git remote add origin https://github.com/{yourRepo}/modal-carousel
     git pull upstream master
 
 ##Code Format and Style
@@ -122,9 +122,9 @@ Install node modules from terminal.
 
 ##Project
 
-Install and launch project from terminal (where 'grunt-starter-kit' is the location of your project).
+Install and launch project from terminal (where 'modal-carousel' is the location of your project).
 
-    cd grunt-starter-kit
+    cd modal-carousel
     ./update.sh
     grunt live
 
@@ -174,13 +174,13 @@ Finally, push all the changes up to your Git repo
 
 Jet Brains IDE: VCS > Git > Push
 
-##Pull Requests back into Flippy grunt-starter-kit
+##Pull Requests back into Flippy modal-carousel
 
 Unless you're *very* familiar with the Git command line, It's recommended that you use the Git Pull Request Tools.
 
 - Go to https://github.com/{your org}/{your repo}/compare/ replacing the example names inside {brackets} with your own.
 - Use the "compare across forks" option.
-- Compare the Psykoral/grunt-starter-kit on the left with your own repo and fork on the right.
+- Compare the Psykoral/modal-carousel on the left with your own repo and fork on the right.
 - Using the 'Files Changed' tab, make sure all your changes are in correctly.
 - Once confirmed, hit the *Click to create a pull request for this comparison* button.
 - Be sure to check back for comments, questions and suggested changes on your pull request.
@@ -193,7 +193,7 @@ Every so often, there's an update to a bower or node module, or we add new depen
 
     Local Npm module "grunt-half-baked" not found. Is it installed?
 
-There's an update script called **update.sh** inside of /grunt-starter-kit/ which will run all the commands to update bower and node modules. You can either run this in the Shell / Git Bash command line with './update.sh', or for convenience, you can make this a one click run configuration in InteliJ. To do so:
+There's an update script called **update.sh** inside of /modal-carousel/ which will run all the commands to update bower and node modules. You can either run this in the Shell / Git Bash command line with './update.sh', or for convenience, you can make this a one click run configuration in InteliJ. To do so:
 
 For Windows users, make sure you have the the Git Bash, and locate where the .exe is. i.e.: C:\Program Files\Git\bin\sh.exe
 
@@ -216,7 +216,7 @@ For Windows users, make sure you have the the Git Bash, and locate where the .ex
     - Set the options for this script:
 	    - Name: Update
 	    - Script name: Browse to the update.sh file
-	    - Working Directory: Browse to the grunt-starter-kit dir (where the package.json lives)
+	    - Working Directory: Browse to the modal-carousel dir (where the package.json lives)
 	    - Click "OK" to save the configuration.
 4. Run the Update config! You should see a Green Arrow next to the Configurations box in the InteliJ tools menu.
 
@@ -234,4 +234,4 @@ For a visual mapping of all the client side dependencies, use this command.
 
 #Troubleshooting
 
-Please see our [Wiki](https://github.com/Psykoral/grunt-starter-kit/wiki) for troubleshooting tips.
+Please see our [Wiki](https://github.com/Psykoral/modal-carousel/wiki) for troubleshooting tips.

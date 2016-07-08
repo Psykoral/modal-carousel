@@ -1,7 +1,7 @@
-define(['demo/debug/Debug'], function (Debug) {
+define(['main'], function () {
 	'use strict';
 
-	var debug = new Debug();
+	var debug = '';
 
 	describe('Debug script should ', function () {
 		it('be defined', function () {

@@ -1,17 +1,22 @@
-FlippyUI - grunt-starter-kit
+FlippyUI - modal-carousel
 ====
 Build Status:
-- master: [![Build Status](https://travis-ci.org/Psykoral/grunt-starter-kit.svg?branch=master)](https://travis-ci.org/Psykoral/grunt-starter-kit)
+- master: [![Build Status](https://travis-ci.org/Psykoral/modal-carousel.svg?branch=master)](https://travis-ci.org/Psykoral/modal-carousel)
 
-Project template built from FlippyUI. grunt-starter-kit includes:
+Project template built from FlippyUI. modal-carousel includes:
 
-- A Git Clone from [FlippyUI grunt-starter-kit](https://github.com/Psykoral/grunt-starter-kit)
+- A Git Clone from [FlippyUI Grunt starter kit](https://github.com/Psykoral/grunt-starter-kits)
 - Project specific Grunt runner.
 - bower.json and package.json for common dependencies.
-- AMD Javascript sources specific to grunt-starter-kit.
+- AMD Javascript sources specific to modal-carousel.
 - Reference Design Library: http://flippydisk.com/
 
 ## Local Development
+
+### TODO
+
+- JSDoc
+- Jasmine tests
 
 ### Prerequisites
 
@@ -29,10 +34,10 @@ Project template built from FlippyUI. grunt-starter-kit includes:
 
 		npm install -g phantomjs-prebuilt
 
-### Running grunt-starter-kit
+### Running modal-carousel
 
-* Clone grunt-starter-kit
-	<pre>git clone https://github.com/Psykoral/grunt-starter-kit.git</pre>
+* Clone modal-carousel
+	<pre>git clone https://github.com/Psykoral/modal-carousel.git</pre>
 * Run all NPM and Bower items
 	<pre>./update.sh</pre>
 	* Windows users run this with GitBash.exe
@@ -52,25 +57,24 @@ Distribution Package
 The distribution package is the end result of building this project:
 
     dist/
+    - .htaccess
+    - index.html
+    - jsdoc.json
     ├── css/
-       ├── grunt-starter-kit.css
+       ├── modal-carousel.css
+       ├── modal-carousel.min.css
     ├── js/
-       ├── grunt-starter-kit.js
-    ├── font/
-       ├── FontAwesome.otf
-       ├── fontawesome-webfont.eot
-       ├── fontawesome-webfont.svg
-       ├── fontawesome-webfont.ttf
-       ├── fontawesome-webfont.woff
-       ├── fontawesome-webfont.woff2
+       ├── modal-carousel.js
+       ├── modal-carousel.min.js
     ├── img/
-       ├── banner.png
        ├── favicon.ico
+       ├── left.png
        ├── logo.png
+       ├── right.png
 
 Community
 -------
 
-Want to use FlippyUI? See our [Contributing](https://github.com/Psykoral/grunt-starter-kit/blob/master/CONTRIBUTING.md) documentation.
+Want to use FlippyUI? See our [Contributing](https://github.com/Psykoral/modal-carousel/blob/master/CONTRIBUTING.md) documentation.
 
-Developed under the [MIT License](https://github.com/Psykoral/grunt-starter-kit/blob/master/LICENSE.txt).
+Developed under the [MIT License](https://github.com/Psykoral/modal-carousel/blob/master/LICENSE.txt).

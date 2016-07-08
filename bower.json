@@ -1,6 +1,6 @@
 {
-	"name": "grunt-starter-kit",
-	"version": "1.0.1",
+	"name": "modal-carousel",
+	"version": "1.0.0",
 	"main": "main.js",
 	"ignore": [
 		"**/.*",
@@ -9,9 +9,6 @@
 		"tests"
 	],
 	"dependencies": {
-		"requirejs": "^2.0.0",
-		"jquery": "^2.0.0",
-		"canjs": "^2.3.1",
 		"almond": "^0.2.5",
 		"text": "^2.0.10",
 		"easeless": "^0.1.0",
