@@ -108,7 +108,8 @@ html
 			color: @h2;
 		}
 
-		ul
+		ul,
+		ol
 		{
 			margin: 0 0 2em 0;
 			padding: 0 0 0 1.4em;
@@ -261,16 +262,41 @@ html
 			width: 100%;
 			height: 20px;
 
-			summary::-webkit-details-marker {
-				display:none;
-			}
-		}
+			summary {
+				display: block;
+				cursor: pointer;
 
-		article,
-		nav
-		{
-			position: relative;
-			margin: 40px 20px 20px;
+				&::-webkit-details-marker {
+					display: none;
+				}
+			}
+
+			> :nth-child(n) {
+				display: block;
+			}
+
+			&[closed] {
+				+ nav,
+				+ article {
+					max-height: 0;
+					transition: max-height 0.15s ease-out;
+					overflow: hidden;
+					margin-top: 0;
+					margin-bottom: 0;
+
+					> :nth-child(n) {
+						visibility: hidden;
+					}
+				}
+			}
+
+			+ article,
+			+ nav {
+				position: relative;
+				margin: 40px 20px 20px;
+				max-height: 500000px;
+				transition: max-height 0.25s ease-in;
+			}
 		}
 
 		@import "article";

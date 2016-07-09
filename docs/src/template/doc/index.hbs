@@ -9,12 +9,37 @@ layout: default.hbs
         </summary>
     </details>
     <article>
-		<p>
-            FlippyUI - Modal Carousel uses the Flickr API: <a href="https://api.flickr.com/services/feeds/photos_public.gne?tags=nature&format=json" target="_blank">Recent Uploads tagged nature</a>. It primarily uses CSS to display dialog boxes and control one item to the next. JavaScript is applied to load the data from the API and provide some extra click watching for more clickable areas to close the dialog and looping the previous & next buttons. Otherwise, the Carousel is also accessible via the arrow keys. The template also tries to be friendly to all screens and reflow as needed.
-		</p>
-		<p>
-            Flickr images are uploaded by public users and I am not responsible for their content. Flickr response can be a bit slow at times, so please be patient. Check the NET tab if you don't believe me ;c)
-		</p>
+		<ol>
+			<li>
+                FlippyUI - Modal Carousel uses the Flickr API to pull in pictures: <a href="https://api.flickr.com/services/feeds/photos_public.gne?tags=nature&format=json" target="_blank">Recent Uploads tagged nature</a>.
+			</li>
+            <li>
+                It primarily uses CSS to display dialog boxes and show one item or the next& previous, and the Carousel is also accessible via the arrow keys.
+            </li>
+            <li>
+                JavaScript is applied to load the data from the API and provide some extra click watching for more clickable areas to close the dialog and looping the previous & next buttons.
+            </li>
+            <li>
+                The template also tries to be friendly to all screens and reflow as needed.
+            </li>
+            <li>
+				The section headers are collapsible for ease of use, especially on mobile.
+				<ol>
+					<li>
+						Uses the &lt;details&gt; and &lt;summary&gt; tags.
+					</li>
+					<li>
+                        Uses a small generic JS Polyfill for browsers that don't support those tags very well yet.
+					</li>
+				</ol>
+            </li>
+			<li>
+                Flickr images are uploaded by public users and I am not responsible for their content.
+			</li>
+			<li>
+                Flickr response can be a bit slow at times, so please be patient. Check the NET tab if you don't believe me ;c)
+			</li>
+		</ol>
         {{> dialog }}
     </article>
 </section>

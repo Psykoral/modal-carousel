@@ -379,6 +379,7 @@ module.exports = function (grunt) {
 					'concurrent:main',
 					'concat:dist-js',
 					'concat:dist-min-js',
+					'testdocs',
 					'copy:temp'
 				]
 			},
