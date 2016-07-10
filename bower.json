@@ -1,7 +1,7 @@
 {
 	"name": "modal-carousel",
 	"version": "1.0.0",
-	"main": "main.js",
+	"main": "src/js/main.js",
 	"ignore": [
 		"**/.*",
 		"node_modules",

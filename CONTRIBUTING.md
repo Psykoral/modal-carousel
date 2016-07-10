@@ -118,7 +118,7 @@ Install node modules from terminal.
 
     npm install bower -g
     npm install grunt-cli -g
-    npm install -g phantomjs
+    npm install -g phantomjs-prebuilt
 
 ##Project
 
